@@ -8,7 +8,7 @@ import datetime
 
 db = DBHelper()
 
-TOKEN = "877535563:AAE6YASygZ3ua9YYylWVH-1Sx0NGXbFsbHo"
+TOKEN = "<bot_api_token>"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 GROUP_ID=-1001190092036
 
