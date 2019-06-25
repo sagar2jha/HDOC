@@ -32,7 +32,15 @@ def check_commit(username):
             return "no-repo"
     except TypeError:
         pass
-    if (len(js) > 0):
-        return "committed"
-    else:
-        return "not-committed"
+    try:
+        if (len(js) > 0):
+            date = js[0]["commit"]["author"]["date"]
+            today = (datetime.datetime.today()).date().isoformat()
+            if ( today in date ):
+                return "committed"
+            else:
+                return "not-committed"
+        else:
+            return "not-committed"
+    except KeyError:
+        pass
