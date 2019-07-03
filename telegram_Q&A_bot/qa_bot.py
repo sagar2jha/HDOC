@@ -1,6 +1,5 @@
 import json 
 import requests
-import time
 import urllib
 
 TOKEN = "<bot_api_token>"
