@@ -1,4 +1,3 @@
-
 def sudofibo(arr,array):
 	if array[len(array)-2] + array[len(array)-1]  not in arr:
 		return array
@@ -21,8 +20,15 @@ for i in range(len(arr)-2):
 	for j in range(i+1,len(arr)):
 		if arr[i] + arr[j] in arr:
 			array.append([arr[i],arr[j],arr[i]+arr[j]])
-for k in range(1,len(array)):
-	sudofibo(arr,array[k])
-print(compare(array))	
+if len(array[0]) == 0 :
+	print(-1)
+else:			
+	for k in range(1,len(array)):
+		sudofibo(arr,array[k])
+	print(compare(array))	
+
+
+
+
 
 
